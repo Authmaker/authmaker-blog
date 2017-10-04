@@ -1,0 +1,14 @@
+<h3>Create a new post:</h3>
+<form {{action "createPost" on="submit"}}>
+    <label for="post-title">Title:</label>
+    {{input value=title name="post-title" required=true}}
+    <label for="post-body">Body:</label>
+    {{textarea value=body cols="80" rows="6" required=true}}
+    <button type="submit">Submit</button>
+</form>
+{{#if hasError}}
+    <p>Oops, an error occurred. Your post was not saved.</p>
+{{/if}}
+
+
+{{outlet}}

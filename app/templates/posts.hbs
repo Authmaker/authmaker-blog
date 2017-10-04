@@ -1,9 +1,3 @@
-<h3>Posts:</h3>
-<ul>
-    {{#each model as |post|}}
-        <li>{{link-to post.title 'post' post}}</li>
-    {{else}}
-        <li>No posts to show.</li>
-    {{/each}}
-</ul>
+{{link-to 'view all posts' 'posts'}}
+{{link-to 'create new post' 'posts.new'}}
 {{outlet}}
