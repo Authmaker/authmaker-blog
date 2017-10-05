@@ -7,6 +7,11 @@ module.exports = function(environment) {
     environment,
     rootURL: '/',
     locationType: 'auto',
+    authmaker: {
+      // domainUrl: "http://localhost:5000",
+      // redirectUri: "http://localhost:4200/login",
+      // clientId: "some client Id"
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
