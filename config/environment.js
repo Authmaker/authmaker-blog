@@ -7,11 +7,6 @@ module.exports = function(environment) {
     environment,
     rootURL: '/',
     locationType: 'auto',
-    authmaker: {
-      // domainUrl: "http://localhost:5000",
-      // redirectUri: "http://localhost:4200/login",
-      // clientId: "some client Id"
-    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -33,6 +28,8 @@ module.exports = function(environment) {
       ENV['ember-cli-mirage'] = {
          enabled: false
       }
+      ENV.authmaker = { domainUrl: "https://authblog.authmaker.com", redirectUri: "http://localhost:4200/login", clientId: "d67e832076da31788acde1500abb67c4e19b4908" };
+    
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
@@ -52,7 +49,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.authmaker = { domainUrl: "https://authblog.authmaker.com", redirectUri: "https://authblog.com/login", clientId: "70a96a49efcf2b594a05eeaed6133c76c0d2a5bb" };
   }
 
   return ENV;
